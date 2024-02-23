@@ -1,0 +1,27 @@
+create database paytm;
+use paytm;
+create table payment (
+customer_id int primary key,
+customer varchar(40),
+mode varchar(50),
+city varchar(40)
+); 
+
+insert into payment
+(customer_id,customer,mode,city)
+values
+(101,"Dheemant Pandey","netbanking","Lucknow"),
+(102,"etan sinclair","credit card","miami"),
+(103,"maya henrandez","credit card","seattle"),
+(104,"liam donavan","netbanking","denver"),
+(105,"sophia bguen","credit card","new orleans"),
+(106,"cabel foster","debit card","minneapolis"),
+(107,"ava patel ","debit card","phoniex"),
+(108,"lucas carter","netbanking","boston"),
+(109,"Bhavesh Yadav","netbanking","Delhi"),
+(110,"Aryat","credit card","Gorakhpur");
+
+select mode, count(mode)
+from payment
+group by mode
+   
